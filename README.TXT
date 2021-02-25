@@ -1,12 +1,11 @@
 ------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
+1904 Assignment 2: I will show you my development process using
+a series of commits. Each commit will show you one stage in 
+my development of the solution to A2
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: 1904 A2
+PURPOSE OF PROJECT: Evaluate 4 hands of the card game "Six Card Golf"
+VERSION or DATE: February/March 2021
+
+Check out the list of commits to see how the solution was developed in a step wise fashion. Decomposition has been employed and the decomposed plan is reflected in the commits.
