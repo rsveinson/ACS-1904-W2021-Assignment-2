@@ -1,6 +1,6 @@
 
 /**
- * Enumeration class Planets - write a description of the enum class here
+ * Enumeration class Suit: as in suit of a card, Clubs, Spades, Diamonds and hearts 
  *
  * @author (your name here)
  * @version (version number or date here)
