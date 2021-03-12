@@ -57,7 +57,21 @@ public abstract class SetOfCards{
         cards.add(c);
     }// end addCard
 
-
+    /*****************************************
+    * Description: override toString to return a string of of
+    *               all of the cards in the set
+    * 
+    * @return       String a list of all the cards in the set
+    * ****************************************/
+    @Override
+    public String toString(){
+     StringBuilder st = new StringBuilder();   
+     
+     for(Card c : cards)
+         st.append(c);
+  
+     return st.toString();
+    }
 }
 
     /*****************************************
