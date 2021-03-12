@@ -10,11 +10,14 @@
 import java.util.ArrayList;
 
 public abstract class SetOfCards{
+    // some constants
+    protected final int SIZEOFDECK = 50;
+    protected final int SIZEOFHAND = 6;
     
     // instance variables
-    private int maxCards;       // max cards in this set, will be initialized in
+    protected int maxCards;       // max cards in this set, will be initialized in
                                 // the concrete class constructor
-    private ArrayList<Card> cards;
+    protected ArrayList<Card> cards;
     
     // constructors
     public SetOfCards(){
