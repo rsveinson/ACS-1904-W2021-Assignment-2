@@ -35,10 +35,23 @@ public class Hand extends SetOfCards{
     }// end initialized constructor
     
     // abstract method implementation
+    /*****************************************
+    * Description: evaluates the point value of the hand
+    * 
+    * @return       String: the hand and the point value
+    * ****************************************/
     public String evaluate(){
-        String st = "evaluating";
+        StringBuilder st = new StringBuilder();
+        int value = 0;
+        st.append(this.toString());
         
-        return st;
+        // add up the card values
+        for(Card c: cards)
+            value += c.getFace().getPoints();
+            
+        st.append("\nPoints: " + value);
+        
+        return st.toString();
     }// end evaluate
     
     // getters
@@ -64,7 +77,7 @@ public class Hand extends SetOfCards{
              counter = 1;
          }// end  cards printed
             
-     }
+     }// end for
   
      return st.toString();
     }// end toString

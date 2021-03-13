@@ -60,6 +60,9 @@ public class TestDriver{
         // for(int i = 0; i < 7; i++)
             // h2.addCard(deck.deal());            
         // System.out.println(h2);
+        
+        // test Hand evaluate
+        System.out.println(h2.evaluate());
 
         
         
