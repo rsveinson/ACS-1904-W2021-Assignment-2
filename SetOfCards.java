@@ -57,7 +57,7 @@ public abstract class SetOfCards{
     * @param       Card c the card object to add to the set
     * ****************************************/
     public void addCard(Card c){
-        assert cards.size() <= maxCards : "if you add this card you will exceed the max size of this set of cards.";
+        assert cards.size() < maxCards : "if you add this card you will exceed the max size of this set of cards.";
         cards.add(c);
     }// end addCard
 

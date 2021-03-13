@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 /** 
  * ACS-1904 Assignment 1
  * @Sveinson 
@@ -33,6 +34,32 @@ public class TestDriver{
         
         System.out.println(deck);
         System.out.println("size of deck: " + deck.evaluate());
+        
+        
+        // test hand
+        ArrayList<Card> tempHand = new ArrayList();
+        
+        for(int i = 0; i < 6; i++)
+            tempHand.add(deck.deal());
+            
+            //tested with a hand of 7 cards, throws an illegal arguent exceptoi
+            // is working
+            
+        Hand hand = new Hand(tempHand);
+        System.out.println(hand);
+        
+        ArrayList<Card> th2 = new ArrayList();
+        
+        Hand h2 = new Hand();
+        for(int i = 0; i < 6; i++)
+            h2.addCard(deck.deal());            
+        System.out.println(h2);
+        
+        // now with too many cards
+        // tested and confirmed
+        // for(int i = 0; i < 7; i++)
+            // h2.addCard(deck.deal());            
+        // System.out.println(h2);
 
         
         
