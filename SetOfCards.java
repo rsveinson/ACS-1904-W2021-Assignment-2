@@ -8,10 +8,11 @@
  * and a file for the maximium allowable number of cards in the set.
 */
 import java.util.ArrayList;
+import java.util.Collections;
 
 public abstract class SetOfCards{
     // some constants
-    protected final int SIZEOFDECK = 50;
+    protected final int SIZEOFDECK = 52;
     protected final int SIZEOFHAND = 6;
     
     // instance variables
@@ -56,7 +57,7 @@ public abstract class SetOfCards{
     * @param       Card c the card object to add to the set
     * ****************************************/
     public void addCard(Card c){
-        assert cards.size() <= maxCards -1 : "if you add this card you will exceed the max size of this set of cards.";
+        assert cards.size() <= maxCards : "if you add this card you will exceed the max size of this set of cards.";
         cards.add(c);
     }// end addCard
 
@@ -68,13 +69,29 @@ public abstract class SetOfCards{
     * ****************************************/
     @Override
     public String toString(){
+     int counter = 1;
      StringBuilder st = new StringBuilder();   
      
-     for(Card c : cards)
+     for(Card c : cards){
          st.append(c);
+         if(counter++ == 13){
+             st.append("\n");
+             counter = 1;
+         }// end 14 cards printed
+            
+     }
   
      return st.toString();
-    }
+    }// end toString
+    
+    /*****************************************
+    * Description: shuffle the deck of cards, actually simply randomize 
+    *              the order of the cards in the array list
+    * 
+    * ****************************************/
+    public void shuffle(){
+        Collections.shuffle(cards);
+    }// end shuffle
 }
 
     /*****************************************

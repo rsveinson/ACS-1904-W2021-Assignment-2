@@ -18,6 +18,21 @@ public class TestDriver{
         System.out.println(c2);
         System.out.println(c3);
         System.out.println(c4);
+        
+        // test deck constructor
+        Deck deck = new Deck();
+        System.out.println(deck);
+        
+        // test shuffle method of deck
+        deck.shuffle();
+        System.out.println(deck);
+        
+        // test deal and evaluate method of deck
+        System.out.println("size of deck: " + deck.evaluate());
+        System.out.println(deck.deal());
+        
+        System.out.println(deck);
+        System.out.println("size of deck: " + deck.evaluate());
 
         
         

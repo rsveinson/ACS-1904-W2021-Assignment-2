@@ -12,12 +12,14 @@ public class Deck extends SetOfCards{
     public Deck(){
        maxCards = SIZEOFDECK;
        // load deck of card
+       createCards();
        
     }
     
     // implementation of abstract methods
     public String evaluate(){
         String st = "";
+        st += cards.size();
         return st;
     }
     
@@ -27,11 +29,29 @@ public class Deck extends SetOfCards{
     
     // other
     
+    /*****************************************
+    * Description: create 13 cards of each suit, used in the constructor
+    * 
+    * ****************************************/
     private void createCards(){
+        Suit[] suits = Suit.values();
+        Face[] faces = Face.values();
         
-    }
+        for(int i = 0; i < suits.length; i++)
+            for(int j = 0; j < faces.length; j++)
+                this.addCard(new Card(suits[i], faces[j]));
+    }// end create cards
         
 
+    /*****************************************
+    * Description: deal one card off the top of the deck (or off the bottom
+    *               if you're Yosemite Sam. Reduces the deck size by one
+    * 
+    * @return       Card    the top card of the deck
+    * ****************************************/
+    public Card deal(){
+        return cards.remove(0);
+    }// end deal
 }
 
     /*****************************************
