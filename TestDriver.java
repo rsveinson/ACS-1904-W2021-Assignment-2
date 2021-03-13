@@ -63,6 +63,19 @@ public class TestDriver{
         
         // test Hand evaluate
         System.out.println(h2.evaluate());
+        
+        // test colummn pairs
+        Hand pairs = new Hand();
+        pairs.addCard(new Card(Suit.CLUBS, Face.FOUR));
+        pairs.addCard(new Card(Suit.CLUBS, Face.A));
+        pairs.addCard(new Card(Suit.CLUBS, Face.TEN));
+        pairs.addCard(new Card(Suit.CLUBS, Face.TWO));
+        pairs.addCard(new Card(Suit.CLUBS, Face.Q));
+        pairs.addCard(new Card(Suit.CLUBS, Face.TEN));
+        
+        System.out.println(pairs);
+        System.out.println(pairs.evaluate());
+        System.out.println("Cards remaining: " + deck.evaluate());
 
         
         

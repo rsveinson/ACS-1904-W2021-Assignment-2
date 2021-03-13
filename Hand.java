@@ -43,14 +43,34 @@ public class Hand extends SetOfCards{
     public String evaluate(){
         StringBuilder st = new StringBuilder();
         int value = 0;
+        int deduct = 0;        // amount to deduct if column pairs are present
+        
+        // add the representation of the hand to the output
         st.append(this.toString());
         
         // add up the card values
         for(Card c: cards)
             value += c.getFace().getPoints();
-            
-        st.append("\nPoints: " + value);
+        //System.out.println(value); 
         
+        // account for column pairs
+        /* index 0 and index 3 are a column
+         * index 1 and index 4 are a column
+         * index 2 and index 5 are a column
+         * 
+         * I left the System.out.println statements in here so you could see how I evaluated the calculations
+         */
+        deduct += cards.get(0).getFace() == cards.get(3).getFace() ? (cards.get(0).getFace().getPoints() * 2): 0;
+        //System.out.println(deduct);
+        deduct += cards.get(1).getFace() == cards.get(4).getFace() ? (cards.get(1).getFace().getPoints() * 2): 0;
+        //System.out.println(deduct);
+        deduct += cards.get(2).getFace() == cards.get(5).getFace() ? (cards.get(2).getFace().getPoints() * 2): 0;
+        //System.out.println(deduct); 
+        
+        value -= deduct;
+        //System.out.println(value); 
+        
+        st.append("\nPoints: " + value);
         return st.toString();
     }// end evaluate
     
