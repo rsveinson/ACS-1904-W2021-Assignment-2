@@ -70,7 +70,7 @@ public class Hand extends SetOfCards{
         value -= deduct;
         //System.out.println(value); 
         
-        st.append("\nPoints: " + value);
+        st.append("Score: " + value + "\n");
         return st.toString();
     }// end evaluate
     
