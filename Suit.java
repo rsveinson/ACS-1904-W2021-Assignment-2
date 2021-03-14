@@ -2,8 +2,8 @@
 /**
  * Enumeration class Suit: as in suit of a card, Clubs, Spades, Diamonds and hearts 
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author SVeinson
+ * @version Assignment 2
  */
 public enum Suit
 {

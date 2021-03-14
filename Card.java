@@ -1,11 +1,10 @@
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
+
 /** 
  * ACS-1904 Assignment 2
  * @Sveinson 
  * 
- * Card class: one card, as i a playing card, has a face and value i.e. 2, 3, Ace, King, etc..
+ * Card class: one card, as in a playing card, has a face and 
+ * value i.e. 2, 3, Ace, King, etc..
 */
 
 public class Card{
@@ -64,15 +63,8 @@ public class Card{
         
         st = face.getDisplay() + suit.getDisplay();
         return st;
-    }
+    }// end toString
 
 }
 
-    /*****************************************
-    * Description: brief description of the methods purpose
-    * 
-    * @param        each parameter of the method should be listed with an @param
-    * @param        parametername description of parameter
-    * 
-    * @return       any return value will be noted here
-    * ****************************************/
+

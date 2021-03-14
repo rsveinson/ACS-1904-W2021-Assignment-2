@@ -1,9 +1,12 @@
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
+
 /** 
- * ACS-1904 Assignment x
+ * ACS-1904 Assignment 2
  * @Sveinson 
+ * 
+ * Deck class: a deck of playing cards
+ *              a standard deck has 52 cards
+ *              size of deck is set from a constant 
+ *              defined in the abstract class set of cards
 */
 
 public class Deck extends SetOfCards{
@@ -17,11 +20,18 @@ public class Deck extends SetOfCards{
     }
     
     // implementation of abstract methods
+    /*****************************************
+    * Description: the number of cards left in the deck
+    * 
+    * @return       String: st, string representation of the 
+    *                           current size of the deck
+    *                           i.e. how many cards are left
+    * ****************************************/
     public String evaluate(){
         String st = "";
         st += cards.size();
         return st;
-    }
+    }// end evaluate
     
     // getters
     
@@ -45,7 +55,7 @@ public class Deck extends SetOfCards{
 
     /*****************************************
     * Description: deal one card off the top of the deck (or off the bottom
-    *               if you're Yosemite Sam. Reduces the deck size by one
+    *               if you're Yosemite Sam). Reduces the deck size by one
     * 
     * @return       Card    the top card of the deck
     * ****************************************/
@@ -54,11 +64,3 @@ public class Deck extends SetOfCards{
     }// end deal
 }
 
-    /*****************************************
-    * Description: brief description of the methods purpose
-    * 
-    * @param        each parameter of the method should be listed with an @param
-    * @param        parametername description of parameter
-    * 
-    * @return       any return value will be noted here
-    * ****************************************/

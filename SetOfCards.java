@@ -4,7 +4,7 @@
  * 
  * Abstract Class SetOfCards
  * 
- * one or more crad objects. includes a data structrure (in this case an array list)
+ * one or more card objects. includes a data structrure (in this case an array list)
  * and a file for the maximium allowable number of cards in the set.
 */
 import java.util.ArrayList;
@@ -41,6 +41,9 @@ public abstract class SetOfCards{
     // setters
     /*****************************************
     * Description: set the pointer to the array list of cards
+    *               use some mechanism to ensure that the number
+    *               of cards being imported doesn't exceed the 
+    *               maximum number of cards for this set
     * 
     * @param       ArrayList() pointer to an ArrayList of cards
     * ****************************************/
@@ -62,8 +65,10 @@ public abstract class SetOfCards{
     }// end addCard
 
     /*****************************************
-    * Description: override toString to return a string of of
+    * Description: override toString to return a string  of
     *               all of the cards in the set
+    *               set up to print all of the cards in each suit
+    *               on one line. 4 suits = 4 lines
     * 
     * @return       String a list of all the cards in the set
     * ****************************************/
@@ -74,12 +79,13 @@ public abstract class SetOfCards{
      
      for(Card c : cards){
          st.append(c);
-         if(counter++ == 13){
+         //number of cards in the set / 4 suits in a deck of cards
+         if(counter++ == (maxCards / 4)){
              st.append("\n");
              counter = 1;
-         }// end 14 cards printed
+         }// end 13 cards printed
             
-     }
+     }// end for
   
      return st.toString();
     }// end toString
@@ -94,11 +100,3 @@ public abstract class SetOfCards{
     }// end shuffle
 }
 
-    /*****************************************
-    * Description: brief description of the methods purpose
-    * 
-    * @param        each parameter of the method should be listed with an @param
-    * @param        parametername description of parameter
-    * 
-    * @return       any return value will be noted here
-    * ****************************************/

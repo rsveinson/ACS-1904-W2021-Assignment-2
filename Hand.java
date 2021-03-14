@@ -1,11 +1,14 @@
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
+
 import java.util.ArrayList;
 import java.lang.IllegalArgumentException;
 /** 
- * ACS-1904 Assignment x
+ * ACS-1904 Assignment 2
  * @Sveinson 
+ * 
+ * Hand class: one hand of cards, max size taken from a constant
+ *              defined in set of cards
+ *              the hand can be set by the constructor or by adding
+ *              cards one at a time
 */
 
 public class Hand extends SetOfCards{

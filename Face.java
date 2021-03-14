@@ -3,8 +3,8 @@
  * Enumeration class Face, one constant for each of the faces in a suit of
  *                  cards, ACE, 2, 3, ... up to KING
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author SVeinson
+ * @version Assignent 2
  */
 public enum Face
 {
